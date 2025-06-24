@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>ToDo List</h1>
+    <form action="/add" method="POST">
+        <input type="text" name="task" placeholder="Scrie un task..." required>
+        <button type="submit">Adaugă</button>
+    </form>
+    <ul>
+        {% for task in tasks %}
+            <li class="{{ 'done' if task.done }}">
+                {{ loop.index }}. {{ task.task }}
+                <a href="/done/{{ loop.index0 }}">✔️</a>
+                <a href="/delete/{{ loop.index0 }}">❌</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
