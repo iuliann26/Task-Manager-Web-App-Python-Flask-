@@ -1,3 +1,0 @@
-Adaug un fisier nou facut pe un branch nou feature/adaugare_text
-ii dau merge pe main si dupa push pe git in repo
-
